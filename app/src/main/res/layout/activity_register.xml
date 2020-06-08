@@ -6,12 +6,28 @@
     android:layout_height="match_parent"
     tools:context=".RegisterActivity">
 
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/actionbar"
+        style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="-150dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
+        android:text="Registration"
+        android:textColor="#DF1D1D"
+        android:background="#933737"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <EditText
         android:id="@+id/editText"
         android:layout_width="203dp"
         android:layout_height="38dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="96dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="8dp"
         android:background="@drawable/rectangularshape"
         android:ems="10"
@@ -28,7 +44,7 @@
         android:layout_width="208dp"
         android:layout_height="38dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="26dp"
         android:layout_marginEnd="8dp"
         android:background="@drawable/rectangularshape"
         android:ems="10"
@@ -37,7 +53,7 @@
         android:paddingLeft="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintTop_toBottomOf="@id/editText" />
 
     <EditText
         android:id="@+id/editText3"
