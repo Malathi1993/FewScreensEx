@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.text.SpannableStringBuilder;
 import android.text.Spanned;
 import android.text.style.UnderlineSpan;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -45,19 +46,23 @@ public class RegisterActivity extends AppCompatActivity {
         );
         //TextView.setText(ssBuilder);
 
-
-        Registerdlogin.setOnClickListener(new View.OnClickListener() {
+       Login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View arg0) {
                 if (Email.getText().toString().length() == 0) {
                     Email.setError("Email not entered");
                     Email.requestFocus();
-                }  if (Password.getText().toString().length() == 0) {
+                    Log.d("value of x is ", String.valueOf(Email.getText()));
+                }
+                else if (Password.getText().toString().length() == 0) {
                     Password.setError("Password not entered");
                     Password.requestFocus();
-                }  if (MobileNo.getText().toString().length() == 0) {
+                    Log.d("value of x is ", String.valueOf(Password.getText()));
+                }
+                else if (MobileNo.getText().toString().length() == 0) {
                     MobileNo.setError("PhoneNO is Required");
                     MobileNo.requestFocus();
+                    Log.d("value of x is ", String.valueOf(MobileNo.getText()));
                 }
                 else {
                     Toast.makeText(getApplicationContext(), "Success", Toast.LENGTH_LONG).show();
@@ -68,6 +73,5 @@ public class RegisterActivity extends AppCompatActivity {
                 }
             }
         });
-
-    }
+}
 }
