@@ -3,6 +3,7 @@ package com.example.fewscreensex;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Paint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -15,19 +16,19 @@ public class RegisterActivity extends AppCompatActivity {
     EditText Password;
     EditText MobileNo;
     Button Login;
-    TextView Rigisterdlogin;
+    TextView Registerdlogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-        Rigisterdlogin = (TextView) findViewById(R.id.textView);
+        Registerdlogin = (TextView) findViewById(R.id.textView);
         Email = (EditText) findViewById(R.id.editText);
         Password = (EditText) findViewById(R.id.editText2);
         MobileNo = (EditText) findViewById(R.id.editText3);
         Login = (Button) findViewById(R.id.button);
 
-        Rigisterdlogin.setOnClickListener(new View.OnClickListener() {
+        Registerdlogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View arg0) {
                 if (Email.getText().toString().length() == 0) {
@@ -44,6 +45,8 @@ public class RegisterActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "Success", Toast.LENGTH_LONG).show();
                     Intent it = new Intent(getApplicationContext(), LoginActivity.class);
                     startActivity(it);
+                   // Registerdlogin.setPaintFlags(Registerdlogin.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
+                   // Registerdlogin.getPaint().setUnderlineText(true);
                 }
             }
         });
