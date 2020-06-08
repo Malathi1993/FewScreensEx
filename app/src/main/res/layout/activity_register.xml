@@ -6,6 +6,21 @@
     android:layout_height="match_parent"
     tools:context=".RegisterActivity">
 
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/actionbar"
+        style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
+        android:text="Registration"
+        android:textColor="#ffff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <EditText
         android:id="@+id/editText"
         android:layout_width="203dp"
@@ -85,15 +100,15 @@
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="221dp"
-        android:layout_height="44dp"
+        android:layout_width="209dp"
+        android:layout_height="43dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
-        android:text="Facebook Login"
-        android:textColor="#ffff"
         android:background="#4051AF"
+        android:text="Facebook Login"
         android:textAllCaps="false"
+        android:textColor="#ffff"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.556"
         app:layout_constraintStart_toStartOf="parent"
@@ -101,15 +116,15 @@
 
     <Button
         android:id="@+id/button3"
-        android:layout_width="217dp"
+        android:layout_width="197dp"
         android:layout_height="45dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
-        android:text="Gmail Login"
-        android:textColor="#ffff"
         android:background="#F16134"
+        android:text="Gmail Login"
         android:textAllCaps="false"
+        android:textColor="#ffff"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.556"
         app:layout_constraintStart_toStartOf="parent"

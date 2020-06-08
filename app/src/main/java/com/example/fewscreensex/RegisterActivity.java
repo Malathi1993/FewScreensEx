@@ -1,10 +1,14 @@
 package com.example.fewscreensex;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.graphics.Paint;
 import android.os.Bundle;
+import android.text.SpannableStringBuilder;
+import android.text.Spanned;
+import android.text.style.UnderlineSpan;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -27,6 +31,20 @@ public class RegisterActivity extends AppCompatActivity {
         Password = (EditText) findViewById(R.id.editText2);
         MobileNo = (EditText) findViewById(R.id.editText3);
         Login = (Button) findViewById(R.id.button);
+        // getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+        // getSupportActionBar().setCustomView(R.id.actionbar);
+
+        String text = "Login";
+        SpannableStringBuilder ssBuilder = new SpannableStringBuilder(text);
+        UnderlineSpan underlineSpan = new UnderlineSpan();
+        ssBuilder.setSpan(
+                underlineSpan,
+                text.indexOf("Login"),
+                text.indexOf("Login") + String.valueOf("Login").length(),
+                Spanned.SPAN_EXCLUSIVE_EXCLUSIVE
+        );
+        //TextView.setText(ssBuilder);
+
 
         Registerdlogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,5 +68,6 @@ public class RegisterActivity extends AppCompatActivity {
                 }
             }
         });
+
     }
 }
